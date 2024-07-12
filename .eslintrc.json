@@ -1,3 +1,11 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "standard",
+    "standard-jsx",
+    "standard-react"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }

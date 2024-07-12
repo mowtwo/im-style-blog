@@ -1,0 +1,14 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "todo-tree.tree.showBadges": true,
+  "tailwindCSS.classAttributes": [
+    "className",
+    "twName"
+  ]
+}
