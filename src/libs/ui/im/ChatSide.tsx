@@ -1,16 +1,23 @@
+'use client'
+import Link from 'next/link'
 import ChatSideIcon from './ChatSideIcon'
+import { usePathname } from 'next/navigation'
 
 export default function ChatSide () {
+  const pathname = usePathname()
+
   return (
     <div className='bg-gray-300 bg-opacity-70 backdrop-blur-xl h-full'>
       <div className='flex flex-col items-center gap-2 py-6 h-full'>
-        <ChatSideIcon
-          twName={{
-            value: 'mdi--message-outline',
-            actived: 'mdi--message'
-          }}
-          actived
-        />
+        <Link href='/'>
+          <ChatSideIcon
+            twName={{
+              value: 'mdi--message-outline',
+              actived: 'mdi--message'
+            }}
+            actived={pathname === '/'}
+          />
+        </Link>
         <ChatSideIcon
           twName={{
             value: 'mdi--user-outline',
@@ -29,6 +36,13 @@ export default function ChatSide () {
             actived: 'mdi--file-code'
           }}
         />
+        <div>
+          <ChatSideIcon
+            twName={{
+              value: 'mdi--dots-hexagon'
+            }}
+          />
+        </div>
         <div className='mt-auto' />
         <ChatSideIcon
           twName={{

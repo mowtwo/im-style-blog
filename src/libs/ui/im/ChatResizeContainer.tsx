@@ -3,8 +3,8 @@ import React, { useCallback } from 'react'
 import * as Resize from 'react-resizable-panels'
 
 export default function ChatResizeContainer (props: {
-  primary?: React.JSX.Element
-  secondary?: React.JSX.Element,
+  primary?: React.ReactNode
+  secondary?: React.ReactNode,
   defaultLayouts?: [primary: number, secondary: number]
 }) {
   const onLayout = useCallback((sizes: number[]) => {

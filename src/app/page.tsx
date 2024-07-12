@@ -1,9 +1,12 @@
-import ChatContainer from '@/libs/ui/im/ChatContainer'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
-export default function Home () {
-  return (
-    <ChatContainer>
-      <div className='text-red-50'>aaa</div>
-    </ChatContainer>
-  )
+export default function HomePage () {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.replace('/chat')
+  }, [router])
+
+  return <></>
 }
