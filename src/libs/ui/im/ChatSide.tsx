@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import ChatSideIcon from './ChatSideIcon'
 import { usePathname } from 'next/navigation'
+import ChatSideAvatar from './ChatSideAvatar'
 
 export default function ChatSide () {
   const pathname = usePathname()
@@ -9,13 +10,15 @@ export default function ChatSide () {
   return (
     <div className='bg-gray-300 bg-opacity-70 backdrop-blur-xl h-full'>
       <div className='flex flex-col items-center gap-2 py-6 h-full'>
-        <Link href='/'>
+        <ChatSideAvatar />
+        <div className='mb-4' />
+        <Link href='/chat'>
           <ChatSideIcon
             twName={{
               value: 'mdi--message-outline',
               actived: 'mdi--message'
             }}
-            actived={pathname === '/'}
+            actived={pathname === '/chat'}
           />
         </Link>
         <ChatSideIcon
